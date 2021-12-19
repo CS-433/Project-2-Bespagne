@@ -8,7 +8,7 @@ The raw data, obtained from the INL is not in this GitHub repository, as these f
 
 ## Folder informations:
 1) The folder 'Matlab codes' is informative and used to compute the BLA and IL power spectra, along with the PAC power spectra.
-2) A visualization of the data and the extracted features can be found in the folder 'Visualization data'.
+2) A visualization of the data (upper 6 figures) and -more importantly- the extracted features (lower 3 figures) can be found in the folder 'Visualization data'.
 3) The folder 'Data' contains all the data (.npy-files and .csv-file) to run the Jupyter Notebooks.
 4) The folder 'Jupyter notebooks' contains all the notebooks relevant for the machine learning models.
   * 'CNN_main.ipynb' is the notebook linked to the 1-channel CNN with input the PAC-features.
