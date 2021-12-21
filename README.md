@@ -19,7 +19,7 @@ The raw data, obtained from the INL is not in this GitHub repository, as these f
   * 'PAC_afterCNN.npy' contains the feature vector after running the 1-channel CNN on the PAC colormaps.
   * 'input_MLP' contains the IL and BLA power spectra, which are feeded into the MLP together with 'PAC_afterCNN.npy' data.
 4) The folder 'Jupyter notebooks' contains all the notebooks relevant for the machine learning models.
-  * 'CNN_main.ipynb' is the notebook linked to the 1-channel CNN with input the PAC-features.
+  * 'CNN_main.ipynb' is the notebook linked to the 1-channel CNN with input the PAC-features. It also contains the baseline model.
   * 'MLP.ipynb' is the notebook linked to the MLP with input the CNN feature vector and the BLA and IL power spectra.
   * The other notebooks were used to generate and save the data/features as .npy-files and don't need to be ran.
 
