@@ -8,7 +8,7 @@ Feel free to contact any of us in case you have questions:
  * Alicia Gomez Soria (alicia.soriagomez@epfl.ch, @aliciasoria)
 
 ## General remark:
-The raw data, obtained from the INL is not in this GitHub repository, as these files are too big in size. Hence, all data and labels needed to run the ML-models in Python, are provided as .npy files and a .csv file respectively.
+The raw data, obtained from the INL is not in this GitHub repository, since this data is confidential. Hence, all data and labels needed to run the ML-models in Python, are provided as .npy files and a .csv file respectively.
 
 ## Folder informations:
 1) The folder 'Matlab codes' is informative and used to compute the BLA and IL power spectra, along with the PAC power spectra.

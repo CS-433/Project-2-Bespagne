@@ -25,7 +25,7 @@ import torch.nn as nn
 """
 input_size = 3 * 100
 num_classes = 3
-learning_rate = 0.017287600194096035
+learning_rate = 0.045421358413054946
 batch_size = 10
 num_epochs = 5
 
@@ -46,7 +46,7 @@ class MLP(nn.Module):
         Forward propagation function.
         
         self: self
-        x: tensor of shape (3, 100) (klopt dit?)
+        x: tensor of shape (1, input_size)
         
         returns: tensor of shape (1, num_classes) serving as a feature vector.
         """
@@ -54,7 +54,6 @@ class MLP(nn.Module):
         x = F.relu(self.fc2(x))
         x = F.relu(self.fc3(x))
         x = self.fc4(x)
-        #softmax?
         return x
 
 """
@@ -71,7 +70,7 @@ labels = np.genfromtxt('Data/Labels/avg_smooth.csv', delimiter=',')
 Make labels categorical: 3 quantification levels
 """
 df_labels = pd.DataFrame(labels)
-df_labels = pd.cut(df_labels[0],bins=[0, 0.012, 0.02, 0.03],labels=[0,1,2])
+df_labels = pd.cut(df_labels[0],bins=[0, 0.01, 0.02, 0.03],labels=[0,1,2])
 labels = df_labels.to_numpy()
 
 """
@@ -82,6 +81,7 @@ dir = 'Data/input_MLP/'
 pac = np.load('Data/PAC_afterCNN.npy')
 for filename in os.listdir(dir):
     sample = np.load(dir+filename)
+    sample = np.append(sample, pac)
     data.append(sample.flatten())
 data = np.array(data)
 
