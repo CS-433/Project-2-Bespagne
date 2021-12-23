@@ -70,7 +70,7 @@ labels = np.genfromtxt('Data/Labels/avg_smooth.csv', delimiter=',')
 Make labels categorical: 3 quantification levels
 """
 df_labels = pd.DataFrame(labels)
-df_labels = pd.cut(df_labels[0],bins=[0, 0.01, 0.02, 0.03],labels=[0,1,2])
+df_labels = pd.cut(df_labels[0],bins=[0, 0.013, 0.017, 0.03],labels=[0,1,2])
 labels = df_labels.to_numpy()
 
 """
